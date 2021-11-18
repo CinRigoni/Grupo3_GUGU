@@ -33,16 +33,32 @@ module.exports = {
         type: Sequelize.STRING
       },
       brandsId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'brands',
+          key: 'id'
+        }
       },
       categoriesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'categories',
+          key: 'id'
+        }
       },
       visibilitiesId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'visibilities',
+          key: 'id'
+        }
       },
       discountsId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model: 'discounts',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
